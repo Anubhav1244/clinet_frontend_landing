@@ -5,6 +5,8 @@ import {
   Brush,
   Camera,
   ChevronRight,
+  Diamond,
+  Eye,
   Globe2,
   Handshake,
   Mail,
@@ -14,14 +16,17 @@ import {
   PenTool,
   Phone,
   Printer,
+  Quote,
   Rocket,
   Search,
   ShoppingCart,
   Target,
+  Trophy,
   TrendingUp,
   Users,
   Utensils,
 } from 'lucide-react';
+import primoraLogo from './assets/primoralogo.png';
 import React from 'react';
 const services = [
   {
@@ -78,11 +83,34 @@ const industries = [
   { icon: ShoppingCart, title: 'E-commerce', copy: 'Increase traffic, improve conversions, and scale online sales.' },
 ];
 
+const aboutPillars = [
+  {
+    icon: Target,
+    title: 'Our Mission',
+    copy: 'To empower businesses with smart marketing solutions that drive growth and success.',
+  },
+  {
+    icon: Eye,
+    title: 'Our Vision',
+    copy: 'To be a trusted marketing partner known for innovation, transparency, and real results.',
+  },
+  {
+    icon: Diamond,
+    title: 'Our Values',
+    copy: 'We believe in creativity, integrity, collaboration, and a customer-first approach.',
+  },
+  {
+    icon: Handshake,
+    title: 'Our Promise',
+    copy: 'Your success is our priority. We are with you at every step of the journey.',
+  },
+];
+
 const stats = [
-  ['50+', 'Happy Clients'],
-  ['100+', 'Projects Completed'],
-  ['98%', 'Client Satisfaction'],
-  ['5+', 'Years of Experience'],
+  { icon: Users, value: '100+', label: 'Happy Clients' },
+  { icon: BarChart3, value: '250+', label: 'Projects Completed' },
+  { icon: Rocket, value: '5+', label: 'Years of Experience' },
+  { icon: Trophy, value: '98%', label: 'Client Satisfaction' },
 ];
 
 function App() {
@@ -91,11 +119,7 @@ function App() {
       <nav className="navbar navbar-expand-lg fixed-top primora-nav">
         <div className="container">
           <a className="navbar-brand brand-lockup" href="#home" aria-label="Primora Marketing home">
-            <span className="brand-mark">P</span>
-            <span>
-              <strong>PRIMORA</strong>
-              <small>MARKETING</small>
-            </span>
+            <img size={42} src={primoraLogo} alt="Primora Marketing" />
           </a>
           <button
             className="navbar-toggler"
@@ -246,25 +270,62 @@ function App() {
 
         <section className="section-pad about-section" id="about">
           <div className="container">
-            <div className="row align-items-center g-5">
-              <div className="col-lg-5">
-                <p className="eyebrow">About Primora Marketing</p>
-                <h2>Your Growth Partner</h2>
-                <p>
-                  We combine strategy, creativity, and technology to deliver marketing work that
-                  feels premium and performs in the real world.
-                </p>
-              </div>
-              <div className="col-lg-7">
-                <div className="stats-grid">
-                  {stats.map(([value, label]) => (
-                    <div className="stat-card" key={label}>
-                      <strong>{value}</strong>
-                      <span>{label}</span>
-                    </div>
+            <div className="row align-items-center g-5 about-main">
+              <div className="col-lg-6">
+                <p className="eyebrow about-eyebrow">About Us</p>
+                <h2>
+                  About Primora <span>Marketing</span>
+                </h2>
+                <span className="title-rule" aria-hidden="true" />
+                <div className="about-copy">
+                  <p>
+                    At <strong>Primora Marketing</strong>, we don&apos;t just market brands. We elevate them.
+                  </p>
+                  <p>
+                    We are a results-driven digital marketing agency passionate about helping businesses
+                    grow, connect, and thrive in today&apos;s competitive digital landscape.
+                  </p>
+                  <p>
+                    From innovative strategies to impactful campaigns, we deliver measurable results that
+                    drive real growth and lasting success.
+                  </p>
+                </div>
+                <div className="about-pillars">
+                  {aboutPillars.map(({ icon: Icon, title, copy }) => (
+                    <article className="pillar-card" key={title}>
+                      <div className="pillar-icon">
+                        <Icon size={30} />
+                      </div>
+                      <h3>{title}</h3>
+                      <p>{copy}</p>
+                    </article>
                   ))}
                 </div>
               </div>
+              <div className="col-lg-6">
+                <div className="about-visual">
+                  <img
+                    src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1100&q=85"
+                    alt="Primora Marketing team planning a growth campaign"
+                  />
+                  <div className="quote-card">
+                    <Quote size={36} />
+                    <p>
+                      We combine creativity, data and strategy to build brands that stand out and grow.
+                    </p>
+                    <span aria-hidden="true" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="about-stats-bar">
+              {stats.map(({ icon: Icon, value, label }) => (
+                <div className="about-stat" key={label}>
+                  <Icon size={34} />
+                  <strong>{value}</strong>
+                  <span>{label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -275,11 +336,7 @@ function App() {
           <div className="row g-4">
             <div className="col-lg-4">
               <a className="brand-lockup footer-brand" href="#home">
-                <span className="brand-mark">P</span>
-                <span>
-                  <strong>PRIMORA</strong>
-                  <small>MARKETING</small>
-                </span>
+                <img height={42} width={120} src={primoraLogo} alt="Primora Marketing" />
               </a>
               <p>Your success is our commitment.</p>
             </div>
