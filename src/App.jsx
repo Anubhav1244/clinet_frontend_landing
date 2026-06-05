@@ -13,6 +13,7 @@ import {
   MapPin,
   Megaphone,
   Menu,
+  MessageCircle,
   PenTool,
   Phone,
   Printer,
@@ -25,6 +26,9 @@ import {
   TrendingUp,
   Users,
   Utensils,
+  Facebook,
+  Instagram,
+  Twitter,
 } from 'lucide-react';
 import primoraLogo from './assets/primoralogo.png';
 import React from 'react';
@@ -142,7 +146,7 @@ function App() {
                 </li>
               ))}
             </ul>
-            <a className="btn btn-gold nav-cta" href="#contact">
+            <a className="btn btn-gold nav-cta" href="https://wa.me/917991306456">
               Let&apos;s Talk <ArrowRight size={17} />
             </a>
           </div>
@@ -167,7 +171,7 @@ function App() {
                   <a className="btn btn-gold" href="#services">
                     Our Services <ChevronRight size={18} />
                   </a>
-                  <a className="btn btn-outline-dark" href="#contact">
+                  <a className="btn btn-outline-dark" href="https://mail.google.com/mail/?view=cm&fs=1&to=marketingprimora@gmail.com" target="_blank" rel="noreferrer">
                     Request a Quote
                   </a>
                 </div>
@@ -339,6 +343,20 @@ function App() {
                 <img height={42} width={120} src={primoraLogo} alt="Primora Marketing" />
               </a>
               <p>Your success is our commitment.</p>
+              <div className="social-links" aria-label="Social media links">
+                <a href="https://www.facebook.com/share/18xv4b83Kr/" aria-label="Facebook">
+                  <Facebook size={18} />
+                </a>
+                <a href="https://www.instagram.com/primoramarketing?igsh=MW9sODFtMWZ6dHI3eA== " aria-label="Instagram">
+                  <Instagram size={18} />
+                </a>
+                <a href="https://wa.me/917991306456" aria-label="WhatsApp">
+                  <MessageCircle size={18} />
+                </a>
+                <a href="#" aria-label="Twitter">
+                  <Twitter size={18} />
+                </a>
+              </div>
             </div>
             <div className="col-md-4 col-lg-2">
               <h3>Quick Links</h3>
@@ -356,9 +374,10 @@ function App() {
             </div>
             <div className="col-md-4 col-lg-3">
               <h3>Get In Touch</h3>
-              <p className="contact-line"><Phone size={17} /> 7991306456</p>
+              <p className="contact-line"><Phone size={17} /> +917991306456 </p>
               <p className="contact-line"><Mail size={17} /> marketingprimora@gmail.com</p>
               <p className="contact-line"><MapPin size={17} /> India</p>
+              
             </div>
           </div>
         </div>
