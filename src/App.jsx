@@ -201,18 +201,6 @@ function App() {
             </div>
           </div>
         </section>
-
-        <section className="brand-strip">
-          <div className="container">
-            <span>Trusted by growing brands</span>
-            <strong>The Urban Table</strong>
-            <strong>Skyline Hotels</strong>
-            <strong>TechNova</strong>
-            <strong>StyleHub</strong>
-            <strong>Cartify</strong>
-          </div>
-        </section>
-
         <section className="section-pad services-section" id="services">
           <div className="container">
             <div className="section-heading">
